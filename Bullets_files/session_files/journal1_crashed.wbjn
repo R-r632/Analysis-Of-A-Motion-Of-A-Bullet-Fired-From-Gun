@@ -1,0 +1,89 @@
+# encoding: utf-8
+# 2023 R1
+SetScriptVersion(Version="23.1.153")
+template1 = GetTemplate(TemplateName="Fluid Flow")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.Edit(IsDiscoveryGeometry=True)
+geometry1.SetFile(FilePath="E:/Solidworks/2D-Bullet.IGS")
+meshComponent1 = system1.GetComponent(Name="Mesh")
+meshComponent1.Refresh()
+geometry1.Edit()
+geometry1.Exit()
+system1.Delete()
+system2 = template1.CreateSystem()
+geometry2 = system2.GetContainer(ComponentName="Geometry")
+geometry2.SetFile(FilePath="E:/Solidworks/2D-Bullet.IGS")
+geometry2.Edit(IsSpaceClaimGeometry=True)
+geometry2.Exit()
+geometry2.Edit()
+geometry2.Exit()
+geometry2.SetFile(FilePath="E:/Solidworks/2D-Bullet.IGS")
+geometry2.Edit()
+geometry2.Exit()
+geometry2.Edit(IsSpaceClaimGeometry=True)
+system2.Delete()
+system3 = template1.CreateSystem()
+geometry3 = system3.GetContainer(ComponentName="Geometry")
+geometry3.Edit(IsSpaceClaimGeometry=True)
+geometry3.Exit()
+geometry3.SetFile(FilePath="E:/Solidworks/2D-Bullet.IGS")
+geometryComponent1 = system3.GetComponent(Name="Geometry")
+geometryComponent1.Update(AllDependencies=True)
+geometry3.Edit()
+geometry3.Exit()
+system3.Delete()
+system4 = template1.CreateSystem()
+geometry4 = system4.GetContainer(ComponentName="Geometry")
+geometry4.SetFile(FilePath="E:/Solidworks/2D-Bullet.STEP")
+geometry4.Edit()
+geometry4.Exit()
+geometry4.SetFile(FilePath="E:/Solidworks/2D-Bullet.IGS")
+geometryComponent2 = system4.GetComponent(Name="Geometry")
+geometryComponent2.Update(AllDependencies=True)
+geometry4.Edit()
+geometry4.Exit()
+system4.Delete()
+system5 = template1.CreateSystem()
+geometry5 = system5.GetContainer(ComponentName="Geometry")
+geometry5.SetFile(FilePath="E:/Solidworks/2D-Bulletts.IGS")
+geometry5.Edit(IsDiscoveryGeometry=True)
+geometry5.Exit()
+geometry5.Edit(IsDiscoveryGeometry=True)
+geometry5.Exit()
+system5.Delete()
+system6 = template1.CreateSystem()
+geometry6 = system6.GetContainer(ComponentName="Geometry")
+geometry6.Edit(IsDiscoveryGeometry=True)
+geometry6.SetFile(FilePath="E:/Solidworks/2D-Bulletts.IGS")
+geometry6.Edit()
+geometry6.Exit()
+geometry6.SetFile(FilePath="E:/Solidworks/2D-Bulletts.IGS")
+geometry6.Edit(IsDiscoveryGeometry=True)
+geometry6.Exit()
+meshComponent2 = system6.GetComponent(Name="Mesh")
+meshComponent2.Refresh()
+mesh1 = system6.GetContainer(ComponentName="Mesh")
+mesh1.Edit()
+Save(Overwrite=True)
+Reset()
+Extensions.UnloadExtension(
+    Id="5e7e01a6-8601-11e8-9f8c-28f10e13ffe6",
+    Version="2022.2",
+    Format="Binary")
+Extensions.UnloadExtension(
+    Id="5f463412-bd3e-484b-87e7-cbc0a665e474",
+    Version="2023.1",
+    Format="Binary")
+Extensions.UnloadExtension(
+    Id="7b0e9e84-396d-4099-9602-2ced9dddc253",
+    Version="2023.1",
+    Format="Binary")
+Extensions.UnloadExtension(
+    Id="20180725-3f81-49eb-9f31-41364844c769",
+    Version="2023.1",
+    Format="Binary")
+Extensions.UnloadExtension(
+    Id="f3e3da52-fb02-4910-8cc9-980efd047bc6",
+    Version="2023.1",
+    Format="Binary")
