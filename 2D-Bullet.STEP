@@ -1,0 +1,28 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION (( 'STEP AP214' ),
+    '1' );
+FILE_NAME ('2D-Bullet.STEP',
+    '2023-12-14T11:47:06',
+    ( '' ),
+    ( '' ),
+    'SwSTEP 2.0',
+    'SolidWorks 2023',
+    '' );
+FILE_SCHEMA (( 'AUTOMOTIVE_DESIGN' ));
+ENDSEC;
+
+DATA;
+#1 = APPLICATION_CONTEXT ( 'automotive_design' ) ;
+#2 = APPLICATION_PROTOCOL_DEFINITION ( 'draft international standard', 'automotive_design', 1998, #10 ) ;
+#3 = PRODUCT_DEFINITION_CONTEXT ( 'detailed design', #10, 'design' ) ;
+#4 = PRODUCT_RELATED_PRODUCT_CATEGORY ( 'part', '', ( #6 ) ) ;
+#5 = PRODUCT_CONTEXT ( 'NONE', #1, 'mechanical' ) ;
+#6 = PRODUCT ( '2D-Bullet', '2D-Bullet', '', ( #5 ) ) ;
+#7 = PRODUCT_DEFINITION ( 'UNKNOWN', '', #8, #3 ) ;
+#8 = PRODUCT_DEFINITION_FORMATION_WITH_SPECIFIED_SOURCE ( 'ANY', '', #6, .NOT_KNOWN. ) ;
+#9 = PRODUCT_DEFINITION_SHAPE ( 'NONE', 'NONE',  #7 ) ;
+#10 = APPLICATION_CONTEXT ( 'automotive_design' ) ;
+#11 = APPLICATION_PROTOCOL_DEFINITION ( 'draft international standard', 'automotive_design', 1998, #1 ) ;
+ENDSEC;
+END-ISO-10303-21;
